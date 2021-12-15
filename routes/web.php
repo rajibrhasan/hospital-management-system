@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login',
-    function () {
-        return view('login');
-    }
-);
+Route::get('/home',[HomeController::class,'redirect']);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
