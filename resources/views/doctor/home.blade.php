@@ -9,6 +9,10 @@
 @stop
 
 @section('content')
+<!-- Navbar -->
+
+@include('doctor.navbar')
+
   <div class="row">
     <div class="col-md-6">
       <div class="card" style="border-radius: 15px;">
