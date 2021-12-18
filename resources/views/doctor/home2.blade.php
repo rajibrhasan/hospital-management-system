@@ -26,6 +26,22 @@
     </div>
   </div>
 
+  <div class="row">
+    @foreach($doctors as $doctor)
+    <div class="col-md-6">
+      <div class="card" style="border-radius: 15px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ $doctor->name }}</h5>
+          <h3>{{ $doctor->speciality }}</h3>
+          <h3>{{ $doctor->college }}</h3>
+         
+        </div>
+      </div>
+    </div>
+    @endforeach
+
+  </div>
+
 </main>
 
 @endsection

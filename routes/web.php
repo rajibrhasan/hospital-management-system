@@ -20,10 +20,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/homep',function(){
-    return view('home');
-});
-
 Route::resource('doc',doctorsController::class);
 
 Route::get('/home',[HomeController::class,'redirect']);

@@ -32,7 +32,13 @@
               <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
               <button class="btn btn-outline-success" type="button" id="search">Search</button>
           </div>
-        </li>        
+        </li> 
+        <li class="nav-item">
+          <a href="http://127.0.0.1:8000/login" class="nav-link">Log in</a>
+        </li> 
+        <li class="nav-item"> 
+          <a href ="http://127.0.0.1:8000/register" class="nav-link">Register</a>
+        </li>
       </ul>
     </div>
   </div>
