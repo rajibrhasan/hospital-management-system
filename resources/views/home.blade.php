@@ -55,15 +55,15 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner" >
       <div class="carousel-item active">
-        <img src="{{'images/car1.jpg'}}" class="d-block w-100" style="height: 500px;" alt="...">
+        <img src="{{'images/car1.jpg'}}" class="d-block w-100"  style="height:600px;" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{{'images/car2.png'}}" class="d-block w-100" style="height: 500px;" alt="...">
+        <img src="{{'images/car2.png'}}" class="d-block w-100"   style="height:600px;" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{{'images/car3.jpg'}}" class="d-block w-100" style="height: 500px;" alt="...">
+        <img src="{{'images/car3.jpg'}}" class="d-block w-100"  style="height:600px;" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
