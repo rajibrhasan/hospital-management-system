@@ -24,7 +24,7 @@ class HomeController extends Controller
             }
             else if(Auth::user()->usertype=='2')
             {
-                return view('admin.home'); //dr.home
+                return view('doctor.home'); //dr.home
             }
 
         }
