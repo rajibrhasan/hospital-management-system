@@ -23,7 +23,7 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
   </head>
-  <body>
+  <body style="background-color: #ffffff;">
 
   <div class="container-scroller">
 

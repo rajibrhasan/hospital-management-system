@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     @stack('css')
         
@@ -19,36 +20,10 @@
   <body>
     @yield('header')
     @yield('content')
+    @yield('footer')
 
     
-    <section style="background-color:#316387">
-      <div class="container text-white">
-        <div class="row py-5 px-3">
-          <div class="col-lg-4 ">
-            <h5 class="mb-4">Contact Us</h5>
-            <p>House #16, Road # 2, Dhanmondi R/A, Dhaka-1205, Bangladesh<br>
-              Phone : 09613 787801, 09666 787801<br>
-              E-mail : info@populardiagnostic.com
-            </p>
-          </div>
-
-          <div class="col-lg-4">
-            <h5 class="mb-4">Important Links</h5>
-            <p>House #16, Road # 2, Dhanmondi R/A, Dhaka-1205, Bangladesh<br>
-              Phone : 09613 787801, 09666 787801<br>
-              E-mail : info@populardiagnostic.com
-            </p>
-          </div>
-          <div class="col-lg-4">
-            <h5 class="mb-4"> Quick Links</h5>
-            <p>House #16, Road # 2, Dhanmondi R/A, Dhaka-1205, Bangladesh<br>
-              Phone : 09613 787801, 09666 787801<br>
-              E-mail : info@populardiagnostic.com
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> 
+    
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
