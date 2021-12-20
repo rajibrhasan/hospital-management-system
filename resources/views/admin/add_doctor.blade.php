@@ -13,7 +13,7 @@
       <!-- partial -->
       @include('admin.navbar')
         <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
+        <div class="container-fluid page-body-wrapper" style="background-color: white;">
         <div class="container" align="center" style="padding-top: 100px;">
 
         <form>
