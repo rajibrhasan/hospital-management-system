@@ -5,9 +5,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\PrescriptionController;
+use App\Http\Controllers\PatientController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +26,10 @@ use App\Http\Controllers\PrescriptionController;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/search',function(){
+Route::get('/searchdoc',function(){
     $speciality = DB::table('doctors')->pluck('speciality')->toArray();
     $speciality = array_unique($speciality);
-    return view('patients.bookappt',['speciality'=>$speciality]);
+    return view('patient.searchdoc',['speciality'=>$speciality]);
 });
 
 Route::post('/doclist',function(Request $request){
@@ -34,9 +37,11 @@ Route::post('/doclist',function(Request $request){
 
     $res = DB::table('doctors')->where('speciality',$category)->get();
 
-    return view('patients.book_action',['res'=>$res]);
+    return view('patient.bookdoc',['res'=>$res]);
 });
-Route::resource('doc',doctorsController::class);
+Route::resource('doc',DoctorController::class);
+Route::resource('pat',PatientController::class);
+Route::resource('adm',AdminController::class);
 
 Route::get('/home',[HomeController::class,'redirect']);
 
@@ -48,4 +53,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('apt',AppointmentController::class);
 Route::resource('pres',PrescriptionController::class);
-Route::get('/add_doctor_view',[AdminController::class,'addview']);
+#Route::get('/add_doctor_view',[AdminController::class,'addview']);

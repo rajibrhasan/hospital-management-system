@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin2.home');
     }
 
     /**
@@ -80,8 +80,9 @@ class AdminController extends Controller
      */
     public function destroy(Admin $admin)
     {
-        //
-    public function addview()
+
+    }
+     function addview()
     {
         return view('admin.add_doctor');
     }

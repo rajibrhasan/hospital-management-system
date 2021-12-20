@@ -1,14 +1,11 @@
-@extends('layouts.base')
-@section('header')
-@endsection
+@extends('patient.patbase')
 
-@section('content')
+@section('patContent')
 
-<div class="container">
-	<div class="row align-items-center justify-content-center" style="min-height: 500px;">
+	<div class="row align-items-center justify-content-center" style="min-height: 400px;">
 		<div class="col-md-6">
 			<div class="card" style="border-radius:15px;">
-			  	<h2 class="card-title text-center mb-4">Find Consultant</h2>
+			  	<h2 class="card-title text-center mt-2 mb-4">Find Consultant</h2>
 			  	<form class="mb-4 align-self-center" method="post" action="{{url ('doclist') }}">
 			  		@csrf
 					<div class="form-group ">
@@ -25,8 +22,6 @@
 
 		</div>
 	</div>
-</div>
-
 @endsection
 
 
