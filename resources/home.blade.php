@@ -19,7 +19,7 @@
     <body>
       <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#224cb5;">
         <div class="container">
-          <a class="navbar-brand" href="#">RHR</a>
+          <a class="navbar-brand" href="#">Lifeline Hospital</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
           </button>

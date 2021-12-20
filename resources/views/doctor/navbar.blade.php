@@ -141,10 +141,7 @@
                                     <i class="mdi mdi-link-variant text-warning"></i>
                                 </div>
                             </div>
-                            <div class="preview-item-content">
-                                <p class="preview-subject mb-1">Launch Admin</p>
-                                <p class="text-muted ellipsis mb-0"> New admin wow! </p>
-                            </div>
+    
                         </a>
                         <div class="dropdown-divider"></div>
                         <p class="p-3 mb-0 text-center">See all notifications</p>
