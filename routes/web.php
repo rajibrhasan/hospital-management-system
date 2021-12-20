@@ -48,3 +48,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('apt',AppointmentController::class);
 Route::resource('pres',PrescriptionController::class);
+Route::get('/add_doctor_view',[AdminController::class,'addview']);

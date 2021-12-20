@@ -81,5 +81,8 @@ class AdminController extends Controller
     public function destroy(Admin $admin)
     {
         //
+    public function addview()
+    {
+        return view('admin.add_doctor');
     }
 }
