@@ -43,6 +43,7 @@
                      <option value="heart">Heart</option>
                      <option value="eye">Eye</option>
                      <option value="nose">Nose</option>
+                     <option value="neurologist">Neurologist</option>
                      
                  </select>
 
