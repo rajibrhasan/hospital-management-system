@@ -3,7 +3,7 @@
 @section('header')
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#364bb5;">
   <div class="container">
-    <a class="navbar-brand" href="#">RHR</a>
+    <a class="navbar-brand" href="#">Lifeline Hospital</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -57,13 +57,13 @@
     </div>
     <div class="carousel-inner" >
       <div class="carousel-item active">
-        <img src="{{'images/car1.jpg'}}" class="d-inline-block w-100"  style="height:600px;" alt="...">
+        <img src="{{'images/car1.jpg'}}" class="d-inline-block h-50" style="width: 100%" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{{'images/car2.png'}}" class="d-inline-block w-100"   style="height:600px;" alt="...">
+        <img src="{{'images/car2.png'}}" class="d-inline-block  h-50"  style="width: 100%"  alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{{'images/car3.jpg'}}" class="d-inline-block w-100"  style="height:600px;" alt="...">
+        <img src="{{'images/car3.jpg'}}" class="d-inline-block  h-50" style="width: 100%"  alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -114,5 +114,5 @@
 @endsection('content')
 
 @section('footer')
-  @include('layouts.footer')
+  @parent
 @endsection

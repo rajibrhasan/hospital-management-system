@@ -1,22 +1,61 @@
-@extends('doctor.docbase')
-@section('docContent')
+@extends('layouts.base')
+@push('css')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/sidebar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/doctor.css') }}">
 
-	<div class="row">
-    <div class="col-6">
-      <div class="card">
-        <img class="card-img-top"src="{{'images/car1.jpg'}}" style="height: 300px;" alt="Card image cap">
+@endpush
+@section('header')
+	@include('layouts.sidebar')
+@stop
+
+@section('content')
+<!-- Navbar -->
+
+@include('doctor.navbar')
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" style="border-radius: 15px;">
         <div class="card-body">
           <h5 class="card-title">Upcoming Appointments</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">Appointment ID</th>
+			      <th scope="col">Patient Name</th>
+			      <th scope="col">Date</th>
+			      <th scope="col">Time</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="row">1</th>
+			      <td>Mark</td>
+			      <td>Otto</td>
+			      <td>@mdo</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">2</th>
+			      <td>Jacob</td>
+			      <td>Thornton</td>
+			      <td>@fat</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">3</th>
+			      <td>Larry</td>
+			      <td>the Bird</td>
+			      <td>@twitter</td>
+			    </tr>
+			  </tbody>
+			</table>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     </div>
-    <div class="col-6">
-      <div class="card">
-        <img class="card-img-top"src="{{'images/car2.png'}}" style="height: 300px;" alt="Card image cap">
+    <div class="col-md-6">
+      <div class="card" style="border-radius: 15px;">
         <div class="card-body">
-          <h5 class="card-title">Recent Appointments</h5>
+          <h5 class="card-title">My Appointments</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
@@ -24,4 +63,14 @@
     </div>
   </div>
 
-  @endsection
+  
+
+
+@endsection
+
+@push('script')
+<script src="{{ asset('js/sidebar.js') }}"></script>
+@endpush
+@section('footer')
+
+@stop

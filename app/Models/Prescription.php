@@ -8,8 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Prescription extends Model
 {
     use HasFactory;
-
-    public function appointment(){
-        return $this->belongsTo(Appointment::class);
-    }
 }

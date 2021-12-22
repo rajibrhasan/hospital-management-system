@@ -13,7 +13,7 @@
       <!-- partial -->
       @include('admin.navbar')
         <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
+        <div class="container-fluid page-body-wrapper" style="background-color: white;">
         <div class="container" align="center" style="padding-top: 100px;">
 
         <form>
@@ -43,6 +43,7 @@
                      <option value="heart">Heart</option>
                      <option value="eye">Eye</option>
                      <option value="nose">Nose</option>
+                     <option value="neurologist">Neurologist</option>
                      
                  </select>
 

@@ -7484,7 +7484,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #ffffff;
-  --bs-body-bg: #ffffff; }
+  --bs-body-bg: #fff; }
 
 *,
 *::before,
@@ -20040,7 +20040,7 @@ div.tagsinput {
 /* Navbar */
 .navbar {
   font-weight: normal;
-  background: #1a73e8;
+  background: #191c24;
   left: 244px;
   transition: left 0.25s ease;
   -webkit-transition: left 0.25s ease;
@@ -20325,7 +20325,7 @@ div.tagsinput {
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 70px);
-  background: #1a73e8;
+  background: #191c24;
   font-weight: normal;
   padding: 0;
   width: 244px;
