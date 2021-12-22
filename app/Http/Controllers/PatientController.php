@@ -82,4 +82,10 @@ class PatientController extends Controller
     {
         //
     }
+
+    public function searchdoc(){
+        $speciality = DB::table('doctors')->pluck('speciality')->toArray();
+        $speciality = array_unique($speciality);
+        return view('patient.searchdoc',['speciality'=>$speciality]);
+    }
 }

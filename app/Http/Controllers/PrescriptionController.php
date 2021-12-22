@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Prescription;
+use App\Models\Appointment;
 use Illuminate\Http\Request;
 
 class PrescriptionController extends Controller
@@ -24,9 +25,9 @@ class PrescriptionController extends Controller
      */
     public function create()
     {
-        
-    
-        return view('prescription.create');
+        $apts = Appointment::all();
+
+        return view('doctor.createpres',['apts'=>$apts]);
     
     }
 
@@ -40,9 +41,15 @@ class PrescriptionController extends Controller
     {
 
 
+        $request->validate([
+            'appointment_id' => 'required',
+            'symptoms' => 'required',
+            'advice' => 'required',
+        ]);
+
         $pres = new Prescription;
 
-        $pres->appointment_id = (int) $request->get('appointment_id');
+        $pres->appointment_id = (int) $request->input('appointment_id');
 
         $pres->symptoms = $request->get('symptoms');
         $pres->advice = $request->get('advice');

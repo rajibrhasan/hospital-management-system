@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App/Models/User;
 
-class Doctor extends Model,User
+class Doctor extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['id'];
 
     public function appointment(){
         return $this->hasMany(Appointment::class);

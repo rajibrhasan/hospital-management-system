@@ -14,7 +14,6 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        
     }
 
     /**
@@ -24,7 +23,7 @@ class AppointmentController extends Controller
      */
     public function create()
     {
-        return view('appointment.create');
+        return view('patient.home');
     }
 
     /**
@@ -37,8 +36,8 @@ class AppointmentController extends Controller
     {
 
         $request->validate([
-            'patient_id' => 'required',
-            'doctor_id' => 'required',
+            'pat_id' => 'required',
+            'doc_id' => 'required',
             'date' => 'required',
             'time' => 'required',
         ]);
@@ -47,9 +46,9 @@ class AppointmentController extends Controller
 
         $apt = new Appointment;
     
-        $apt->patient_id = (int)$request->get('patient_id');
+        $apt->patient_id = (int)$request->get('pat_id');
 
-        $apt->doctor_id = (int)$request->get('doctor_id');
+        $apt->doctor_id = (int)$request->get('doc_id');
 
         $apt->date = $request->get('date');
 
@@ -57,12 +56,7 @@ class AppointmentController extends Controller
 
         $apt->save();
 
-        return redirect()->route('apt.create')
-                        ->with('success','Appointment created successfully.');
-
-
-    
-        
+         return response()->json(['success'=>'Appointment created successfully.']);    
     }
 
     /**

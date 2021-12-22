@@ -14,17 +14,17 @@ class HomeController extends Controller
     {
         if(Auth::id())
         {
-            if(Auth::user()->usertype=='0')
+            if(Auth::user()->usertype=='admin')
             {
-                return view('dashboard');
+                return view('admin.home');
             }
-            else if(Auth::user()->usertype=='1')
+            else if(Auth::user()->usertype=='patient')
             {
-                return view('admin.home'); 
+                return view('patient.home'); 
             }
-            else if(Auth::user()->usertype=='2')
+            else if(Auth::user()->usertype=='doctor')
             {
-                return view('doctor.home'); //dr.home
+                return view('doctor.home'); 
             }
 
         }

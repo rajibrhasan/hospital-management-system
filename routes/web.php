@@ -26,19 +26,22 @@ use App\Http\Controllers\PatientController;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/searchdoc',function(){
+Route::get('pat/searchdoc',function(){
     $speciality = DB::table('doctors')->pluck('speciality')->toArray();
     $speciality = array_unique($speciality);
     return view('patient.searchdoc',['speciality'=>$speciality]);
 });
+
 
 Route::post('/doclist',function(Request $request){
     $category = $request->input('sel');
 
     $res = DB::table('doctors')->where('speciality',$category)->get();
 
-    return view('patient.bookdoc',['res'=>$res]);
+    return view('patient.bookdoc',['res'=>$res,'category'=>$category]);
 });
+Route::resource('apt',AppointmentController::class);
+Route::resource('pres',PrescriptionController::class);
 Route::resource('doc',DoctorController::class);
 Route::resource('pat',PatientController::class);
 Route::resource('adm',AdminController::class);
@@ -51,6 +54,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::resource('apt',AppointmentController::class);
-Route::resource('pres',PrescriptionController::class);
+
 #Route::get('/add_doctor_view',[AdminController::class,'addview']);

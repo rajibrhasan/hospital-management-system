@@ -14,10 +14,10 @@
 				<h1><a href="index.html" class="logo">LH</a></h1>
         <ul class="list-unstyled components mb-5">
           <li class="active">
-            <a href="#"><span class="fa fa-home"></span>Dashboard</a>
+            <a href="{{route('doc.index')}}"><span class="fa fa-home"></span>Dashboard</a>
           </li>
           <li>
-              <a href="#"><span class="fa fa-user"></span>Prescription</a>
+              <a href="{{route('pres.create')}}"><span class="fa fa-user"></span>Prescription</a>
           </li>
           <li>
             <a href="#"><span class="fa fa-sticky-note"></span>Appointments</a>
@@ -56,17 +56,35 @@
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <h6 style="padding-right:8px;">Dr. Sanzar Adnan</h6>
-                    <p style="margin-bottom: 0px;">Doctor</p>
+                    <h6 style="padding-right:10px;">{{Auth::user()->name}}</h6>
+                    <p style="margin-bottom: 0px;">{{Auth::user()->usertype}}</p>
                 </li>
                 <li class="nav-item">
-                    <img src="{{asset('profile_pic/default_user.png')}}" height="36px">
-                    
+                    <img src="{{asset('profile_pic/default_user.png')}}" height="36px"> 
+                    <ul class="dropdown">
+                      <form method="POST" action="{{route('logout')}}">
+                        @csrf
+                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit(); " role="button">
+                         <i class="fas fa-sign-out-alt"></i>
+
+                        {{ __('Log Out') }}
+                      </a></li>
+
+                      </form>
+                     
+                    </ul>
                 </li>
+                <li class="nav-item">
+								   
+                </li>
+                
               </ul>
             </div>
           </div>
         </nav>
+
+
 
         @yield('docContent')
 	
@@ -79,7 +97,7 @@
 @endsection
 
 @push('script')
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 <script src="{{ asset('js/sidebar.js') }}"></script>
 @endpush
 @section('footer')

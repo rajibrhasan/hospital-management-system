@@ -56,12 +56,24 @@
                     <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <h6 style="padding-right:8px;">Sumaiya Afnan</h6>
-                    <p style="margin-bottom: 0px;">Admin</p>
+                    <h6 style="padding-right:10px;">{{Auth::user()->name}}</h6>
+                    <p style="margin-bottom: 0px;">{{Auth::user()->usertype}}</p>
                 </li>
-                <li class="nav-item">
-                    <img src="{{asset('profile_pic/default_user.png')}}" height="36px">
-                    
+                <li class="nav-item dropdown">
+                    <img src="{{asset('profile_pic/default_user.png')}}" id="dropdown1" data-bs-toggle="dropdown"  height="36px">
+                    <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                      <form method="POST" action="{{route('logout')}}">
+                        @csrf
+                         <li ><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit(); " role="button">
+                         <i class="fas fa-sign-out-alt"></i>
+
+                        {{ __('Log Out') }}
+                      </a></li>
+
+                      </form>
+                     
+                    </ul>  
                 </li>
               </ul>
             </div>
