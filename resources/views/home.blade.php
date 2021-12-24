@@ -40,31 +40,33 @@
   <div class="row py-5">
     <div class="col-lg-4">
       <div class="card">
-        <img class="card-img-top"src="{{'images/car1.jpg'}}" style="height: 300px;" alt="Card image cap">
+        <img class="card-img-top"src="{{'images/appointment.jpg'}}" style="height: 250px;" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Search Doctor</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Don't Delay Care</h5>
+          <p class="card-text">Maintaining the safest environment possible at all our facilities is a top priority. 
+            You don't have to wait to get the health care you need.
+          </p>
+          <a href="#" class="btn btn-primary">Book Appointment</a>
         </div>
       </div>
     </div>
     <div class="col-lg-4">
       <div class="card">
-        <img class="card-img-top" src="{{'images/car2.png'}}" style="height: 300px;"alt="Card image cap">
+        <img class="card-img-top" src="{{'images/view_doctor.jpg'}}" style="height: 250px;"alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Book Appointment</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Primary Care Network</h5>
+          <p class="card-text">Searching the web for a medical diagonsis? Get here the best doctor with their amazing behaviour. </p>
+          <a href="#" class="btn btn-primary">View Doctors</a>
         </div>
       </div>
     </div>
     <div class="col-lg-4">
       <div class="card">
-        <img class="card-img-top"src="{{'images/car3.jpg'}}" style="height: 300px;" alt="Card image cap">
+        <img class="card-img-top"src="{{'images/car4.jpg'}}" style="height: 250px;" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Service Charge</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Get to know about our service charges, emergency care and other haelth package charges in single click.</p>
+          <a href="#" class="btn btn-primary">Service Charge</a>
         </div>
       </div>
     </div>
