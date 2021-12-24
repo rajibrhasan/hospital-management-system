@@ -50,3 +50,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::get('/add_doctor_view',[AdminController::class,'addview']);
+
+Route::get('/contact_us', function(){ 
+    return view ('contact_us');
+});
+
+Route::get('/blood_bank', function(){ 
+    return view ('blood_bank');
+});

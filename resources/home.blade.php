@@ -41,7 +41,7 @@
                 <a class="nav-link" href="#contact">Career</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
+                <a class="nav-link" href="{{url('/contact_us')}}">Contact Us</a>
               </li>
               <li class="nav-item">
                 <div class="input-group  ">
@@ -57,6 +57,7 @@
           </div>
       </div>
     </nav>
+    @section('home_content')
      <section>
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="max-height: 50%;" >
         <div class="carousel-indicators">
@@ -122,6 +123,7 @@
           </div>
         </div>
     </section>
+    @endsection
     <section style="background-color:#316387">
       <div class="container text-white">
       <div class="row py-5 px-3">
@@ -156,6 +158,7 @@
       </div>
     </div>
     </section>
+
     </div>
 
     
