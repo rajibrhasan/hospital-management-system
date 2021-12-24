@@ -66,7 +66,7 @@
         <div class="card-body">
           <h5 class="card-title">Service Charge</h5>
           <p class="card-text">Get to know about our service charges, emergency care and other haelth package charges in single click.</p>
-          <a href="#" class="btn btn-primary">Service Charge</a>
+          <a href="{{url('/test _and_service_chaeges')}}" class="btn btn-primary">Service Charge</a>
         </div>
       </div>
     </div>
