@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+  
     @include('admin.css')
   </head>
   <body>
@@ -14,9 +16,9 @@
       @include('admin.navbar')
         <!-- partial -->
         <div class="container-fluid page-body-wrapper" style="background-color: white;">
-        <div class="container" align="center" style="padding-top: 100px;">
+        <div class="container" aligne="center" style="padding-top: 100px;">
 
-        <form>
+        <form style="color: black;">
             <div style="padding: 15px;">
                 <label>Doctor Name</label>
                 <input type="text" name="name" style="color:blue;" placeholder="Write the name">
@@ -24,8 +26,8 @@
             </div>
 
             <div style="padding: 15px;">
-                <label>Phone</label>
-                <input type="number" name="number" style="color:blue;" placeholder="Write the Phone Number">
+                <label >Phone</label>
+                <input type="text" name="number" style="color:blue;" placeholder="Write the Phone Number">
 
             </div>
 

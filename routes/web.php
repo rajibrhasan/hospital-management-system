@@ -70,4 +70,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
-#Route::get('/add_doctor_view',[AdminController::class,'addview']);
+Route::get('/add_doctor_view',[AdminController::class,'addview']);
