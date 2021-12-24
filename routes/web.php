@@ -78,3 +78,7 @@ Route::get('/message_from_chairman', function(){
 Route::get('/mission_&_vision', function(){ 
     return view ('mission_&_vision');
 });
+
+Route::get('/test _and_service_chaeges', function(){ 
+    return view ('test _and_service_chaeges');
+});
