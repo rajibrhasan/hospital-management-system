@@ -71,3 +71,10 @@ Route::get('/health_package', function(){
     return view ('health_package');
 });
 
+Route::get('/message_from_chairman', function(){ 
+    return view ('message_from_chairman');
+});
+
+Route::get('/mission_&_vision', function(){ 
+    return view ('mission_&_vision');
+});
