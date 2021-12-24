@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Doctor;
 use Illuminate\Http\Request;
-use DB;
 
-class doctorsController extends Controller
+class DoctorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class doctorsController extends Controller
      */
     public function index()
     {
-        $doctors  = DB::select('select * from doctors');
-        return view('doctor.home',['doctors'=>$doctors]);
+        return view('doctor.home');
     }
 
     /**
@@ -25,7 +24,7 @@ class doctorsController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class doctorsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Doctor $doctor)
     {
         //
     }
@@ -53,10 +52,10 @@ class doctorsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Doctor $doctor)
     {
         //
     }
@@ -65,22 +64,24 @@ class doctorsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Doctor $doctor)
     {
-        //
+        
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Doctor $doctor)
     {
         //
     }
+
+    
 }

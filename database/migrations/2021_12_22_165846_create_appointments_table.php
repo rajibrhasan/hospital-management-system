@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreaeAdminsTable extends Migration
+class CreateAppointmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,14 @@ class CreaeAdminsTable extends Migration
      */
     public function up()
     {
-        Schema::create('admins', function (Blueprint $table) {
-            $table->integer('id');
-            $table->string('name');
-            $table->string('email')->unique;
-            $table->string('phone');
-            $table->string('address');
-            $table->string('gender')->nullable();
+        Schema::create('appointments', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedBigInteger('patient_id');
+            $table->unsignedBigInteger('doctor_id');
+            $table->date('date');
+            $table->time('time');
             $table->timestamps();
-
         });
-
-
     }
 
     /**
@@ -34,6 +30,6 @@ class CreaeAdminsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('appointments');
     }
 }

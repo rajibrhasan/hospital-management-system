@@ -59,9 +59,24 @@
                     <h6 style="padding-right:8px;">{{Auth::user()->name}}</h6>
                     <p style="margin-bottom: 0px;">{{Auth::user()->usertype}}</p>
                 </li>
-                <li class="nav-item">
-                    <img src="{{asset('profile_pic/default_user.png')}}" height="36px">
-                    
+                 <li class="nav-item dropdown">
+
+                  <img src="{{asset('profile_pic/default_user.png')}}" height="36px">
+                  <div class=" dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> </div>
+                   
+                    <ul class="dropdown-menu" id="dropdownMenuLink">
+                      <form method="POST" action="{{route('logout')}}">
+                        @csrf
+                         <li ><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit(); ">
+                         <i class="fas fa-sign-out-alt"></i>
+
+                        {{ __('Log Out') }}
+                      </a></li>
+
+                      </form>
+                     
+                    </ul>
                 </li>
               </ul>
             </div>

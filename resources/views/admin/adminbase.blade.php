@@ -2,6 +2,8 @@
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/sidebar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/doctor.css') }}">
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+
 
 
 @endpush
@@ -17,7 +19,7 @@
             <a href="#"><span class="fa fa-home"></span>Dashboard</a>
           </li>
           <li>
-              <a href="#"><span class="fa fa-user"></span>Prescription</a>
+              <a href="{{url('/adm/adduser')}}"><span class="fa fa-user"></span>Add New User</a>
           </li>
           <li>
             <a href="#"><span class="fa fa-sticky-note"></span>Appointments</a>
@@ -91,9 +93,6 @@
 @endsection
 
 @push('script')
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="{{ asset('js/sidebar.js') }}"></script>
 @endpush
-@section('footer')
 
-@stop

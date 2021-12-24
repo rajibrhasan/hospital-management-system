@@ -4,23 +4,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreaePatientsTable extends Migration
+class CreateAdminsTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-   public function up()
+    public function up()
     {
-        Schema::create('patients', function (Blueprint $table) {
-            $table->integer('id');
+        Schema::create('admins', function (Blueprint $table) {
+            $table->unsignedBigInteger('id');
             $table->string('name');
             $table->string('email')->unique;
             $table->string('phone');
             $table->string('address');
             $table->string('gender')->nullable();
-            $table->date('dob')->nullable();
             $table->timestamps();
 
         });
@@ -35,6 +34,6 @@ class CreaePatientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('patients');
+        Schema::dropIfExists('admins');
     }
 }

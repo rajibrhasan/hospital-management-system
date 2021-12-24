@@ -2,6 +2,7 @@
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/sidebar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/doctor.css') }}">
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 
 @endpush
@@ -26,7 +27,8 @@
             <a href="#"><span class="fa fa-users"></span>Patients</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-cog"></span>Edit Profile</a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#editmodal"><span class="fa fa-cog"></span>Update Profile</a>
+
           </li>
         </ul>
 
@@ -59,16 +61,30 @@
                     <h6 style="padding-right:10px;">{{Auth::user()->name}}</h6>
                     <p style="margin-bottom: 0px;">{{Auth::user()->usertype}}</p>
                 </li>
-                <li class="nav-item">
-                    <img src="{{asset('profile_pic/default_user.png')}}" height="36px"> 
-                    <ul class="dropdown">
+                <li class="nav-item dropdown">
+
+                  <img src="{{asset('profile_pic/default_user.png')}}" height="36px">
+                  <div class=" dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> </div>
+                   
+                    <ul class="dropdown-menu" id="dropdownMenuLink">
                       <form method="POST" action="{{route('logout')}}">
                         @csrf
-                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
-                        this.closest('form').submit(); " role="button">
+                         <li ><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit(); ">
+                         <i class="fas fa-sign-out-alt"></i>Logout
+
+                        
+                      </a></li>
+
+                      </form>
+
+                      <form method="POST" action="{{route('logout')}}">
+                        @csrf
+                         <li ><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit(); ">
                          <i class="fas fa-sign-out-alt"></i>
 
-                        {{ __('Log Out') }}
+                       {{ __('Update Password') }}
                       </a></li>
 
                       </form>
@@ -100,6 +116,4 @@
 
 <script src="{{ asset('js/sidebar.js') }}"></script>
 @endpush
-@section('footer')
 
-@stop
