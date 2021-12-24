@@ -10,7 +10,7 @@
 <div class="container">
         <div class="row" style="padding-top: 80px;">
           <div class="col-md-7">
-            <img src="image/mission_p1.webp" alt="" style="max-width: 500%;">
+            <img src="images/mission_p1.webp" alt="" style="max-width: 500%;">
           </div>
 
           <div class="col-md-5">
@@ -65,7 +65,7 @@
           </div>
           
           <div class="col-md-3">
-            <img src="image/vission_p2.jpg" alt="" style="max-width: 250%;">
+            <img src="images/vission_p2.jpg" alt="" style="max-width: 250%;">
           </div>
 
           

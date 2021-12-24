@@ -10,7 +10,7 @@
 <div class="container">
         <div class="row" style="padding-top: 80px;">
           <div class="col-md-5">
-            <img src="image/chairman.jpg" alt="" style="max-width: 500%;">
+            <img src="images/chairman.jpg" alt="" style="max-width: 500%;">
           </div>
 
           <div class="col-md-7">
