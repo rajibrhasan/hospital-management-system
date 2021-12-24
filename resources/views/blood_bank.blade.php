@@ -12,7 +12,7 @@
     <div class="container" style="padding-top: 30px">
       <div class="row">
         <div class="col-md-5">
-          <img src="image/blood_bank.jpg" alt="" style="max-width: 100%" />
+          <img src="images/blood_bank.jpg" alt="" style="max-width: 100%" />
         </div>
 
         <div class="col-md-6">

@@ -6,11 +6,13 @@
 @endsection('header')
 
 @section('content')
-          <div class="row">
-        <div class="col-md-4">
-          <img src="image/contact_us1.jpg" alt="" style="max-width: 100%; padding-top: 70px;">
+<div style="min-height: 650px;">
+<div class="container" style="padding-top: 30px">
+          <div class="row" >
+        <div class="col-md-3">
+          <img src="images/contact_us1.jpg" alt="" style=" padding-top: 70px; padding-left: 100px;">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8" style="padding-left: 250px;">
           <div class="container" > 
             <h1>
               Contact  Us
@@ -42,6 +44,8 @@
           </div>
         </div>
         </div>
+      </div>
+      </div>
       </div>
       @endsection('content')
 

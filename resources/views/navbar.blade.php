@@ -16,7 +16,7 @@
             <li><a class="dropdown-item" href="about_us.html">Mission & Vision</a></li>
             <li><a class="dropdown-item" href="#">Message From Chairman</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">About Lifeline Hospital</a></li>
+            <li><a class="dropdown-item" href="{{url('/about_lifeline')}}">About Lifeline Hospital</a></li>
           </ul>
         </li>
 
@@ -25,7 +25,7 @@
           Services
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-            <li><a class="dropdown-item" href="about_us.html">Health Packages</a></li>
+            <li><a class="dropdown-item" href="{{url('/ health_package')}}">Health Packages</a></li>
             <li><a class="dropdown-item" href="#">Test and Service Chaeges</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="{{url('/blood_bank')}}">Blood Bank</a></li>
@@ -42,7 +42,7 @@
           <a class="nav-link" href="#contact">Doctors</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Career</a>
+          <a class="nav-link" href="{{url('/career')}}">Career</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{url('/contact_us')}}">Contact Us</a>

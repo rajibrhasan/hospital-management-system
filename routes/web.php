@@ -58,3 +58,16 @@ Route::get('/contact_us', function(){
 Route::get('/blood_bank', function(){ 
     return view ('blood_bank');
 });
+
+Route::get('/about_lifeline', function(){ 
+    return view ('about_lifeline');
+});
+
+Route::get('/career', function(){ 
+    return view ('career');
+});
+
+Route::get('/health_package', function(){ 
+    return view ('health_package');
+});
+
