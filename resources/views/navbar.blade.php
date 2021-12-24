@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#364bb5;">
   <div class="container">
-    <a class="navbar-brand" href="#">Lifeline Hospital</a>
+    <a class="navbar-brand" href="#"><strong>LH</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
