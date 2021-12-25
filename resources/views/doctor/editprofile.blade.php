@@ -2,7 +2,7 @@
 @section('docContent')
 
 <div class="row">
-	<
+	jdksfjdjkj
 </div>
 
 @endsection

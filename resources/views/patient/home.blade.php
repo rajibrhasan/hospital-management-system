@@ -24,6 +24,53 @@
     </div>
   </div>
 
+
   @endsection
+
+  @push('script')
+
+
+<script type="text/javascript">
+  $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+  });
+
+
+
+  $('.modal-form').click(function (e){
+    e.preventDefault();
+
+    var sp = $('#speciality').val();
+    var hos = $('#hospital').val();
+    var post = $('#post').val();
+    var id = $('#user_id').val();
+
+    console.log(sp);
+    console.log(hos);
+    console.log(post);
+    console.log(id);
+
+
+
+     $.ajax({
+           type:'POST',
+           url:'doc/update',
+           data:{sp: sp, hos:hos, post:post,doc_id:id},
+           success:function(json){
+              alert(json.success);
+           },
+           error:function(request,status,error){
+              alert(request.responseText);
+
+           }
+        });
+
+      $(".editmodal").modal('hide');
+  
+  });
+</script>
+@endpush
 
  

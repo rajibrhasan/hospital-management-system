@@ -34,7 +34,7 @@
                
               <div class="modal-body">
 
-                <form class="mb-4 px-5 align-items-center" id ="modal-form" method="POST" action="">
+                <form class="mb-4 px-5 align-items-center" id ="modal-form" method="POST" action="{{url('doc/editprofile')}}">
             
                   <div class="row mb-2">
                   	<input type="text" value="{{Auth::user()->id}}"  id ="user_id" hidden>
@@ -96,7 +96,7 @@
 
      $.ajax({
            type:'POST',
-           url:'doc/update',
+           url:'doc/editprofile',
            data:{sp: sp, hos:hos, post:post,doc_id:id},
            success:function(json){
               alert(json.success);

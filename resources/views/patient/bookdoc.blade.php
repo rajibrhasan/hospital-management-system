@@ -7,7 +7,7 @@
 @section('patContent')
 
 <div class="row">
-  <h3 class="mt-0">{{$category}}</h3>
+  <h3 class="mt-0">Available Doctors</h3>
 	@foreach($res as $key=>$doctor)
     <div class="col-md-3">
       <div class="card" style="border-radius: 15px;">
@@ -40,10 +40,12 @@
                       <h4 class="m-0">{{ $doctor->name }}</h4>
                       <h5 class="m-0">{{ $doctor->speciality }}</h5>
                       <p class="m-0">{{ $doctor->college }}</p>
+                      <p class="m-0">Sun,Mon,Tue,Wed,Thu,Fri</p>
+                      <p class="m-0">6pm-8pm</p>
                     </div>
                   </div>
                   <input type="text" value="{{$doctor->id}}" name = "doc_id" id = "doc{{$key}}" hidden>
-                  <input type="text" value="1" name = "pat_id" id = "pat_id" hidden>
+                  <input type="text" value="{{Auth::user()->id}}" name = "pat_id" id = "pat_id" hidden>
                
                   <div class="form-group row">
                     
@@ -65,11 +67,6 @@
             </div>
           </div>
         </div>
-
-
-
-         
-
           
         </div>
       </div>

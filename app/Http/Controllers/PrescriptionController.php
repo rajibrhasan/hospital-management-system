@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Prescription;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PrescriptionController extends Controller
 {
@@ -50,9 +51,12 @@ class PrescriptionController extends Controller
         $pres = new Prescription;
 
         $pres->appointment_id = (int) $request->input('appointment_id');
+        $pres->patient_id = DB::table('appointments')->where('id',$pres->appointment_id)->pluck('patient_id')->first();
+        $pres->doctor_id = DB::table('appointments')->where('id',$pres->appointment_id)->pluck('doctor_id')->first();
 
         $pres->symptoms = $request->get('symptoms');
-        $pres->advice = $request->get('advice');
+        $pres->treatment = $request->get('advice');
+        $pres->created_at = date('Y-m-d H:i:s');
 
         $pres->save();
 
@@ -68,8 +72,11 @@ class PrescriptionController extends Controller
      * @param  \App\Models\Prescription  $prescription
      * @return \Illuminate\Http\Response
      */
-    public function show(Prescription $prescription)
+    public function show($id)
     {
+        $pres = Prescription::find($id);
+
+        return view('patient.presdetails',['pres'=>$pres]);
         
     }
 
@@ -79,9 +86,9 @@ class PrescriptionController extends Controller
      * @param  \App\Models\Prescription  $prescription
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prescription $prescription)
+    public function edit($id)
     {
-        //
+
     }
 
     /**

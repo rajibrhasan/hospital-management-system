@@ -9,8 +9,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav nav-fill w-100  mx-auto mb-2 mb-lg-0">
-        
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           About Us
@@ -65,7 +63,7 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner" >
+    <div class="carousel-inner" style="height:500px;" >
       <div class="carousel-item active">
         <img src="{{'images/car1.jpg'}}" class="d-inline-block h-50" style="width: 100%" alt="...">
       </div>

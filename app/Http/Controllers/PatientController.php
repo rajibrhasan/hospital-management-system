@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Patient;
 use Illuminate\Http\Request;
+use App\Models\Prescription;
+use Illuminate\Support\Facades\DB;
 
 class PatientController extends Controller
 {
@@ -87,5 +89,27 @@ class PatientController extends Controller
         $speciality = DB::table('doctors')->pluck('speciality')->toArray();
         $speciality = array_unique($speciality);
         return view('patient.searchdoc',['speciality'=>$speciality]);
+    }
+
+    public function viewpres($id){
+        $pres = DB::table('prescriptions')->where('patient_id',$id)->get();
+
+
+        foreach($pres as $p){
+
+            $doc_id = $p->doctor_id;
+            $doc = DB::table('doctors')->where('id',$doc_id)->pluck('name')->first();
+            $sp = DB::table('doctors')->where('id',$doc_id)->pluck('speciality')->first();
+
+            $p->docname = $doc;
+            $p->speciality = $sp;
+        }
+
+        return view('viewpres',['prescriptions'=>$pres]);
+    }
+
+    public function viewreport($id){
+        $reports = DB::table('reports')->where('patient_id',$id)->get();
+        return view('patient.reportview',['reports'=>$reports]);   
     }
 }

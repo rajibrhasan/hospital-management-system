@@ -20,11 +20,6 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="usertype" value="{{ __('Usertype') }}" />
-                <x-jet-input id="usertype" class="block mt-1 w-full" type="text" name="usertype" :value="old('usertype')" required />
-            </div>
-
-            <div class="mt-4">
                 <x-jet-label for="phone" value="{{ __('Phone') }}" />
                 <x-jet-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
             </div>
