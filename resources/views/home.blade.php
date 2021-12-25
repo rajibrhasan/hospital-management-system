@@ -15,17 +15,17 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner ">
+    <div class="carousel-inner" style="min-height: 100px;">
       <div class="carousel-item active">
-        <img src="{{'images/car1.jpg'}}" class="d-inline-block h-50" style="width: 100%;height:500px;" alt="...">
+        <img src="{{'images/car4_new1.jpg'}}" style="width: 100%; height: 515px; " alt="...">  
+      </div>
+      
+      <div class="carousel-item">
+        <img src="{{'images/car6.jpg'}}"  style="width: 100%; height: 515px;"  alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{{'images/car2.png'}}" class="d-inline-block  h-50"  style="width: 100%"  alt="...">
+        <img src="{{'images/car5_new.jpg'}}"  style="width: 100%; height: 515px;"  alt="...">
       </div>
-      <div class="carousel-item">
-        <img src="{{'images/car3.jpg'}}" class="d-inline-block  h-50" style="width: 100%"  alt="...">
-      </div>
-    </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
