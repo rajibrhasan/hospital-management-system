@@ -16,7 +16,7 @@
     </div>
     <div class="carousel-inner" style="min-height: 100px;">
       <div class="carousel-item active">
-        <img src="{{'images/car4_new1.jpg'}}" style="width: 100%; height: 515px; " alt="...">  
+        <img src="{{'images/car4_new1.jpg'}}" style="width: 100%; height: 515px; " alt="..."> 
       </div>
       
       <div class="carousel-item">

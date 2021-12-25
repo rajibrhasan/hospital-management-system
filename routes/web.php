@@ -131,3 +131,6 @@ Route::get('/guest/doclist',function(){
     $res = DB::table('doctors')->get();
     return view('doclist',['res'=>$res]);
 });
+Route::get('/gallery', function(){ 
+    return view ('gallery');
+});

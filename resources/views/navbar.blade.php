@@ -40,7 +40,7 @@
 
         
         <li class="nav-item">
-          <a class="nav-link" href="{{url('/guest/doclist')}}" style="color: white; font-weight: 550;">For Patients</a>
+          <a class="nav-link" href="{{url('/gallery')}}" style="color: white; font-weight: 550;">Gallery</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{url('/guest/doclist')}}" style="color: white; font-weight: 550;" >Doctors</a>
