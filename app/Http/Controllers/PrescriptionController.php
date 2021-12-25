@@ -26,7 +26,7 @@ class PrescriptionController extends Controller
      */
     public function create()
     {
-        $apts = Appointment::all();
+        $apts = DB::table('appointments')->get();
 
         return view('doctor.createpres',['apts'=>$apts]);
     

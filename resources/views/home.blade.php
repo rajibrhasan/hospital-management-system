@@ -46,10 +46,48 @@
           <p class="card-text">Maintaining the safest environment possible at all our facilities is a top priority. 
             You don't have to wait to get the health care you need.
           </p>
-          <a href="#" class="btn btn-primary">Book Appointment</a>
+          <button type="button" class="btn btn-primary modal-btn"  data-bs-toggle="modal" data-bs-target="#login">Book Appointment</button>
         </div>
       </div>
     </div>
+     <div class="modal fade" id="login">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+               
+               
+              <div class="modal-body">
+
+                <form class="mb-4 px-5 align-items-center" id ="modal-form" method="POST" action="{{route('login')}}">
+                  @csrf
+                  
+               
+                  <div class="form-group row">
+                    
+                    <label class="p-1" for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                  </div>
+                  <div class="form-group row">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                  </div>
+                </form>
+                 
+                
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" id = "loginbtn" onclick ="event.preventDefault();document.getElementById('modal-form').submit();"class="btn btn-primary modal-form">Login</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+               
+            </div>
+          </div>
+        </div>
+          
+       
     <div class="col-lg-4">
       <div class="card">
         <img class="card-img-top" src="{{'images/view_doctor.jpg'}}" style="height: 250px;"alt="Card image cap">

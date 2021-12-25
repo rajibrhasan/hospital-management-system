@@ -39,8 +39,9 @@
 					<div class="col-sm-9">
 						<select class="js-example-basic-single js-states" style="width: 100%;height: 40px;"data-live-search="true" placeholder="Appointment ID" id="appointment_id" name="appointment_id">
 						@foreach($apts as $apt)
-							
-							<option value="{{$apt->id}}">{{$apt->id}}</option>
+							@if($apt->doctor_id == Auth::user()->id)
+								<option value="{{$apt->id}}">{{$apt->id}}</option>
+							@endif
 						@endforeach
 					</select>
 					</div>

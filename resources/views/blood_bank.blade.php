@@ -10,7 +10,7 @@
 <h1 style="padding-left: 123px; padding-top: 20px;"> Blood Bank Information</h1>
 
     <div class="container" style="padding-top: 30px">
-      <div class="row">
+      <div class="row mb-4">
         <div class="col-md-5">
           <img src="images/blood_bank.jpg" alt="" style="max-width: 100%" />
         </div>

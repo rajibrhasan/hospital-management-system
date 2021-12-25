@@ -132,7 +132,6 @@ class AdminController extends Controller
             $admin->save();
         }
 
-        echo $user;
 
         return redirect('adm/adduser')
                         ->with('success','User created successfully.');

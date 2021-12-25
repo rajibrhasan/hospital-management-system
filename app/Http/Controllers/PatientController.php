@@ -105,7 +105,7 @@ class PatientController extends Controller
             $p->speciality = $sp;
         }
 
-        return view('viewpres',['prescriptions'=>$pres]);
+        return view('patient.viewpres',['prescriptions'=>$pres]);
     }
 
     public function viewreport($id){

@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-md-6">
 
-          <div class="card" style="width: 25rem; background-color: #2959C2; color: white;">
+          <div class="card px-5" style=" min-height : 600px; width: 400px;background-color: #F8EEE3; color:;">
             
             <div class="card-body" >
               <h5 class="card-title">Why do we need health check-up:<hr></h5>
@@ -32,7 +32,7 @@
         </div>
         <div class="col-md-6">
           
-          <div class="card" style="width: 25rem; background-color: #2959C2; color: white;">
+          <div class="card px-5" style="min-height: 600px;width: 400px; background-color: #F8EEE3; color: black;">
             
             <div class="card-body" >
               <h5 class="card-title">Preparations before going for a health check-up:<hr></h5>
@@ -70,7 +70,7 @@
       <div class="row">
         <div class="col">
 
-          <div class="card" style="width: 25rem; background-color: #2959C2; color: white;">
+          <div class="card px-5" style=" min-height: 570px;width: 400px;background-color: #F8EEE3; ">
             
             <div class="card-body">
               <h5 class="card-title">Primary Health Check-up Package-1 <hr>
@@ -126,7 +126,7 @@
         </div>
         <div class="col">
           
-          <div class="card" style="width: 25rem; background-color: #2959C2; color: white;">
+          <div class="card" style=" min-height: 570px;width: 400px;background-color: #F8EEE3;">
             
             <div class="card-body">
               <h5 class="card-title">Primary Health Check-up Package-2 <hr></h5>

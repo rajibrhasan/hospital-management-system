@@ -107,7 +107,7 @@
            }
         });
 
-      $(".editmodal").modal('hide');
+      $("#editmodal").modal('hide');
   
   });
 </script>
