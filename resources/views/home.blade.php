@@ -1,56 +1,7 @@
 @extends('layouts.base')
 
 @section('header')
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#364bb5;">
-  <div class="container">
-    <a class="navbar-brand" href="#">Lifeline Hospital</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav nav-fill w-100  mx-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          About Us
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="about_us.html">Mission & Vision</a></li>
-            <li><a class="dropdown-item" href="#">Message From Chairman</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">About Lifeline Hospital</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#resume">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#project">For Patients</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Doctors</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Career</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <div class="input-group  ">
-              <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-              <button class="btn btn-outline-success" type="button" id="search">Search</button>
-          </div>
-        </li> 
-        <li class="nav-item">
-          <a href="http://127.0.0.1:8000/login" class="nav-link">Log in</a>
-        </li> 
-        <li class="nav-item"> 
-          <a href ="http://127.0.0.1:8000/register" class="nav-link">Register</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+@include('navbar')
 
 @endsection('header')
 
@@ -89,31 +40,33 @@
   <div class="row py-5">
     <div class="col-lg-4">
       <div class="card">
-        <img class="card-img-top"src="{{'images/car1.jpg'}}" style="height: 300px;" alt="Card image cap">
+        <img class="card-img-top"src="{{'images/appointment.jpg'}}" style="height: 250px;" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Search Doctor</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Don't Delay Care</h5>
+          <p class="card-text">Maintaining the safest environment possible at all our facilities is a top priority. 
+            You don't have to wait to get the health care you need.
+          </p>
+          <a href="#" class="btn btn-primary">Book Appointment</a>
         </div>
       </div>
     </div>
     <div class="col-lg-4">
       <div class="card">
-        <img class="card-img-top" src="{{'images/car2.png'}}" style="height: 300px;"alt="Card image cap">
+        <img class="card-img-top" src="{{'images/view_doctor.jpg'}}" style="height: 250px;"alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Book Appointment</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Primary Care Network</h5>
+          <p class="card-text">Searching the web for a medical diagonsis? Get here the best doctor with their amazing behaviour. </p>
+          <a href="#" class="btn btn-primary">View Doctors</a>
         </div>
       </div>
     </div>
     <div class="col-lg-4">
       <div class="card">
-        <img class="card-img-top"src="{{'images/car3.jpg'}}" style="height: 300px;" alt="Card image cap">
+        <img class="card-img-top"src="{{'images/car4.jpg'}}" style="height: 250px;" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Service Charge</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Get to know about our service charges, emergency care and other haelth package charges in single click.</p>
+          <a href="{{url('/test _and_service_chaeges')}}" class="btn btn-primary">Service Charge</a>
         </div>
       </div>
     </div>
@@ -122,32 +75,5 @@
 @endsection('content')
 
 @section('footer')
-  <section style="background-color:#316387">
-      <div class="container text-white">
-        <div class="row py-5 px-3">
-          <div class="col-lg-4 ">
-            <h5 class="mb-4">Contact Us</h5>
-            <p>House #16, Road # 2, Dhanmondi R/A, Dhaka-1205, Bangladesh<br>
-              Phone : 09613 787801, 09666 787801<br>
-              E-mail : info@populardiagnostic.com
-            </p>
-          </div>
-
-          <div class="col-lg-4">
-            <h5 class="mb-4">Important Links</h5>
-            <p>House #16, Road # 2, Dhanmondi R/A, Dhaka-1205, Bangladesh<br>
-              Phone : 09613 787801, 09666 787801<br>
-              E-mail : info@populardiagnostic.com
-            </p>
-          </div>
-          <div class="col-lg-4">
-            <h5 class="mb-4"> Quick Links</h5>
-            <p>House #16, Road # 2, Dhanmondi R/A, Dhaka-1205, Bangladesh<br>
-              Phone : 09613 787801, 09666 787801<br>
-              E-mail : info@populardiagnostic.com
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> 
-@endsection
+@include('footer')
+@endsection('footer')

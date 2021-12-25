@@ -93,3 +93,35 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::get('/add_doctor_view',[AdminController::class,'addview']);
+
+Route::get('/contact_us', function(){ 
+    return view ('contact_us');
+});
+
+Route::get('/blood_bank', function(){ 
+    return view ('blood_bank');
+});
+
+Route::get('/about_lifeline', function(){ 
+    return view ('about_lifeline');
+});
+
+Route::get('/career', function(){ 
+    return view ('career');
+});
+
+Route::get('/health_package', function(){ 
+    return view ('health_package');
+});
+
+Route::get('/message_from_chairman', function(){ 
+    return view ('message_from_chairman');
+});
+
+Route::get('/mission_&_vision', function(){ 
+    return view ('mission_&_vision');
+});
+
+Route::get('/test _and_service_chaeges', function(){ 
+    return view ('test _and_service_chaeges');
+});
