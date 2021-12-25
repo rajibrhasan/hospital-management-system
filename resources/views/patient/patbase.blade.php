@@ -9,7 +9,7 @@
 <!-- Navbar -->
 <div class="wrapper d-flex align-items-stretch">
 	<nav id="sidebar" class="active">
-				<h1><a href="index.html" class="logo">LH</a></h1>
+				<h1><a href= "{{route('pat.index')}}"class="logo">LH</a></h1>
         <ul class="list-unstyled components mb-5">
           <li class="active">
             <a href="{{route('pat.index')}}"><span class="fa fa-home"></span>Dashboard</a>

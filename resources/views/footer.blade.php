@@ -30,14 +30,14 @@
             <h5 class="mb-4">Important Links</h5>
              <ul class="list list-unstyled">
               <li class="mb-1">
-                <a href="https://www.dghs.gov.bd/index.php/bd/" style="color:white;">Directorate General of Health Services</a>
+                <a href="https://www.dghs.gov.bd/index.php/bd/" target="a_blank" style="color:white;">Directorate General of Health Services</a>
               </li>
               <li class="mb-1">
-                <a href="http://www.mohfw.gov.bd/" style="color:white;">Ministry of Health and Family Welfare
+                <a href="http://www.mohfw.gov.bd/" target="a_blank" style="color:white;">Ministry of Health and Family Welfare
                 </a>
               </li>
               <li class="mb-1">
-                <a href="http://www.dgda.gov.bd/" style="color:white;">Directorate General of Drug Administration</a>
+                <a href="http://www.dgda.gov.bd/" target="a_blank" style="color:white;">Directorate General of Drug Administration</a>
               </li>
             </ul>
           </div>

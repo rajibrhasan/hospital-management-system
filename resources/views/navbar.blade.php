@@ -1,13 +1,15 @@
 
-
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#364bb5;">
   <div class="container">
-    <a class="navbar-brand" href="{{url('/')}}">Home</a>
+    <h1 style="color: white;"class="logo">LH</h1>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav nav-fill w-100  mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{{url('/')}}" style="color: white; font-weight: 550;">Home</a>
+        </li>
         
 
         <li class="nav-item dropdown">
@@ -38,10 +40,10 @@
 
         
         <li class="nav-item">
-          <a class="nav-link" href="#project" style="color: white; font-weight: 550;">For Patients</a>
+          <a class="nav-link" href="{{url('/guest/doclist')}}" style="color: white; font-weight: 550;">For Patients</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact" style="color: white; font-weight: 550;" >Doctors</a>
+          <a class="nav-link" href="{{url('/guest/doclist')}}" style="color: white; font-weight: 550;" >Doctors</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{url('/career')}}" style="color: white; font-weight: 550;">Career</a>
@@ -50,7 +52,7 @@
           <a class="nav-link" href="{{url('/contact_us')}}" style="color: white; font-weight: 550;">Contact Us</a>
         </li>
         <li class="nav-item">
-          <div class="input-group  ">
+          <div class="input-group  " style="padding-right: 10px;">
               <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
               <button class="btn btn-outline-success" type="button" id="search" style="color: white; background-color: #127958;">Search</button>
           </div>

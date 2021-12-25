@@ -1,14 +1,13 @@
 @extends('layouts.base')
 
 @section('header')
-@include('navbar')
+  @include('navbar')
 
 @endsection('header')
 
 @section('content')
 
 <section>
-  <div class="container">
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -34,8 +33,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>  
-  </div>  
+  </div>   
 </section>
 
 <section class="container">
@@ -43,7 +41,7 @@
     <div class="col-lg-4">
       <div class="card">
         <img class="card-img-top"src="{{'images/appointment.jpg'}}" style="height: 250px;" alt="Card image cap">
-        <div class="card-body">
+        <div class="card-body" style="min-height: 200px;">
           <h5 class="card-title">Don't Delay Care</h5>
           <p class="card-text">Maintaining the safest environment possible at all our facilities is a top priority. 
             You don't have to wait to get the health care you need.
@@ -55,19 +53,19 @@
     <div class="col-lg-4">
       <div class="card">
         <img class="card-img-top" src="{{'images/view_doctor.jpg'}}" style="height: 250px;"alt="Card image cap">
-        <div class="card-body">
+        <div class="card-body" style="min-height: 200px;">
           <h5 class="card-title">Primary Care Network</h5>
-          <p class="card-text">Searching the web for a medical diagonsis? Get here the best doctor with their amazing behaviour. </p>
-          <a href="#" class="btn btn-primary">View Doctors</a>
+          <p class="card-text">Searching the web for a medical diagonsis? Get quality treatment from our experienced physicians. They are always ready to serve you.</p>
+          <a href="{{url('/guest/doclist')}}" class="btn btn-primary">View Doctors</a>
         </div>
       </div>
     </div>
     <div class="col-lg-4">
       <div class="card">
         <img class="card-img-top"src="{{'images/car4.jpg'}}" style="height: 250px;" alt="Card image cap">
-        <div class="card-body">
+        <div class="card-body" style="min-height: 200px;">
           <h5 class="card-title">Service Charge</h5>
-          <p class="card-text">Get to know about our service charges, emergency care and other haelth package charges in single click.</p>
+          <p class="card-text">Get to know about our service charges, emergency care and other haelth package charges in single click. Get the best diagnosis with minimum cost.</p>
           <a href="{{url('/test _and_service_chaeges')}}" class="btn btn-primary">Service Charge</a>
         </div>
       </div>

@@ -7,7 +7,6 @@
 			<h2 class="card-title text-center mt-1">{{$report->name}}</h2>
 			<img src="{{asset('reports/'.$report->path)}}" style="">
 			
-			
 		</div>
 		</div>
 	</div>

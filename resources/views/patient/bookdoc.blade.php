@@ -41,7 +41,7 @@
                       <h5 class="m-0">{{ $doctor->speciality }}</h5>
                       <p class="m-0">{{ $doctor->college }}</p>
                       <p class="m-0">Sun,Mon,Tue,Wed,Thu,Fri</p>
-                      <p class="m-0">6pm-8pm</p>
+                      <p class="m-0">6pm-10pm</p>
                     </div>
                   </div>
                   <input type="text" value="{{$doctor->id}}" name = "doc_id" id = "doc{{$key}}" hidden>
