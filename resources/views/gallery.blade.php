@@ -6,9 +6,11 @@
 @endsection('header')
 
 @section('content')
+<div style="min-height: 800px;">
 
+<img src="images/gallery.jpg" alt="">
 
-
+</div>
 
 @endsection('content')
 

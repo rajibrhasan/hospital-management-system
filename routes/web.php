@@ -125,3 +125,7 @@ Route::get('/mission_&_vision', function(){
 Route::get('/test _and_service_chaeges', function(){ 
     return view ('test _and_service_chaeges');
 });
+
+Route::get('/gallery', function(){ 
+    return view ('gallery');
+});
