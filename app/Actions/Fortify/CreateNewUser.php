@@ -26,52 +26,29 @@ class CreateNewUser implements CreatesNewUsers
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'usertype'=>['required','string'],
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
 
-        $usertype = $input['usertype'];
+        $usertype = 'patient';
 
 
         $user = User::create([
             'name' => $input['name'],
             'email' => $input['email'],
-            'usertype'=> $input['usertype'],
+            'usertype'=> $usertype,
             'phone' => $input['phone'],
             'address' => $input['address'],
             'password' => Hash::make($input['password']),
         ]);
 
-         if($usertype=='doctor'){
-            $doctor = new Doctor;
-            $doctor->id = $user->id;
-            $doctor->name = $input['name'];
-            $doctor->email = $input['email'];
-            $doctor->phone = $input['phone'] ;
-            $doctor->address = $input['address'];
-            $doctor->save();
-        }
-
-        else if($usertype=='patient'){
-            $patient = new Patient;
-            $patient->id = $user->id;
-            $patient->name = $input['name'];
-            $patient->email = $input['email'];
-            $patient->phone = $input['phone'] ;
-            $patient->address = $input['address'];
-            $patient->save();
-        }
-
-        else if($usertype=='admin'){
-            $admin = new Admin;
-            $admin->id = $user->id;
-            $admin->name = $input['name'];
-            $admin->email = $input['email'];
-            $admin->phone = $input['phone'] ;
-            $admin->address = $input['address'];
-            $admin->save();
-        }
+        $patient = new Patient;
+        $patient->id = $user->id;
+        $patient->name = $input['name'];
+        $patient->email = $input['email'];
+        $patient->phone = $input['phone'] ;
+        $patient->address = $input['address'];
+        $patient->save();
 
         return $user;
     }

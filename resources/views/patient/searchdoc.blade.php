@@ -9,7 +9,7 @@
 			  	<form class="px-5 mb-4 align-items-center justify-content-center" method="POST" action="{{url ('doclist') }}">
 			  		@csrf
 					<div class="form-group row">
-						<label for="appointment_id" class="col-sm-4 col-form-label">Appointment ID</label>
+						<label for="sel" class="col-sm-4 col-form-label">Speciality</label>
 						<div class="col-sm-8">
 							<select class="js-example-basic-single js-states mb-3 " placeholder="Speciality" style="width: 100%;" data-live-search="true" name='sel' id="sel" multiple>
 					      	@foreach($speciality as $sp)

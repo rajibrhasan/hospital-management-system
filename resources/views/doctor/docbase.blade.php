@@ -2,7 +2,7 @@
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/sidebar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/doctor.css') }}">
-
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 @endpush
 
@@ -23,10 +23,11 @@
             <a href="#"><span class="fa fa-sticky-note"></span>Appointments</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-users"></span>Patients</a>
+            <a href="{{url('doc/viewpatient')}}"><span class="fa fa-users"></span>Patients</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-cog"></span>Edit Profile</a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#editmodal"><span class="fa fa-cog"></span>Update Profile</a>
+
           </li>
         </ul>
 
@@ -60,23 +61,26 @@
                     <p style="margin-bottom: 0px;">{{Auth::user()->usertype}}</p>
                 </li>
                 <li class="nav-item">
-                    <img src="{{asset('profile_pic/default_user.png')}}" height="36px"> 
-                    <ul class="dropdown">
+                  <img src="{{asset('profile_pic/default_user.png')}}" height="36px">
+                </li>
+      
+                   <li class="nav-item dropdown">
+                    <a  class="dropdown-toggle nav-link" id="dropdown1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre data-bs-toggle="dropdown"  height="36px">
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width: 15px;"aria-labelledby="dropdown1">
                       <form method="POST" action="{{route('logout')}}">
                         @csrf
-                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                         <a href="{{ route('logout') }}" onclick="event.preventDefault();
                         this.closest('form').submit(); " role="button">
-                         <i class="fas fa-sign-out-alt"></i>
+                        
 
-                        {{ __('Log Out') }}
-                      </a></li>
+                        Logout
+                      </a>
 
                       </form>
                      
-                    </ul>
-                </li>
-                <li class="nav-item">
-								   
+                    </ul>  
                 </li>
                 
               </ul>
@@ -100,6 +104,4 @@
 
 <script src="{{ asset('js/sidebar.js') }}"></script>
 @endpush
-@section('footer')
 
-@stop

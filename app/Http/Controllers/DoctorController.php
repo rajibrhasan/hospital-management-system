@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Patient;
-use Illuminate\Http\Request;
+use App\Models\Doctor;
+use App\Models\Report;
 use App\Models\Prescription;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PatientController extends Controller
+class DoctorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,7 @@ class PatientController extends Controller
      */
     public function index()
     {
-        return view('patient.home');
+        return view('doctor.home');
     }
 
     /**
@@ -43,10 +44,10 @@ class PatientController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Patient  $patient
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function show(Patient $patient)
+    public function show(Doctor $doctor)
     {
         //
     }
@@ -54,10 +55,10 @@ class PatientController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Patient  $patient
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Patient $patient)
+    public function edit(Doctor $doctor)
     {
         //
     }
@@ -66,33 +67,31 @@ class PatientController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Patient  $patient
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Patient $patient)
+    public function update(Request $request, Doctor $doctor)
     {
-        //
+        
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Patient  $patient
+     * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Patient $patient)
+    public function destroy(Doctor $doctor)
     {
         //
     }
 
-    public function searchdoc(){
-        $speciality = DB::table('doctors')->pluck('speciality')->toArray();
-        $speciality = array_unique($speciality);
-        return view('patient.searchdoc',['speciality'=>$speciality]);
-    }
-
-    public function viewpres($id){
+    public function viewpres(Request $request){
+        $id = (int)$request->get('patient_id');
+        $type = $request->get('type');
         $pres = DB::table('prescriptions')->where('patient_id',$id)->get();
+
+        $reports = DB::table('reports')->where('patient_id',$id)->get();
 
 
         foreach($pres as $p){
@@ -105,11 +104,38 @@ class PatientController extends Controller
             $p->speciality = $sp;
         }
 
-        return view('viewpres',['prescriptions'=>$pres]);
+        if($type=='prescription'){
+             return view('doctor.viewpres',['prescriptions'=>$pres]);
+        }
+
+        else if($type=='report'){
+             return view('doctor.viewreport',['reports'=>$reports]);
+        }
+       
     }
 
-    public function viewreport($id){
+    public function viewreport(Request $request){
+        $id = $request->get('patient_id');
         $reports = DB::table('reports')->where('patient_id',$id)->get();
         return view('patient.reportview',['reports'=>$reports]);   
     }
+
+     public function reportshow( $id)
+    {
+     
+        $report = Report::find($id);
+
+        return view('doctor.reportdetails',['report'=>$report]);
+        
+    
+    }
+
+     public function presshow($id)
+    {
+        $pres = Prescription::find($id);
+
+        return view('doctor.presdetails',['pres'=>$pres]);
+        
+    }
+    
 }

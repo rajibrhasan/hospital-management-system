@@ -2,6 +2,8 @@
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/sidebar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/doctor.css') }}">
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+
 
 
 @endpush
@@ -14,16 +16,13 @@
 				<h1><a href="index.html" class="logo">LH</a></h1>
         <ul class="list-unstyled components mb-5">
           <li class="active">
-            <a href="#"><span class="fa fa-home"></span>Dashboard</a>
+            <a href="{{route('adm.index')}}"><span class="fa fa-home"></span>Dashboard</a>
           </li>
           <li>
-            <a href="{{url('add_doctor_view')}}"><span class="fa fa-cog"></span>Add doctor</a>
+              <a href="{{url('/adm/adduser')}}"><span class="fa fa-user"></span>Add New User</a>
           </li>
           <li>
-              <a href="#"><span class="fa fa-user"></span>Prescription</a>
-          </li>
-          <li>
-            <a href="#"><span class="fa fa-sticky-note"></span>Appointments</a>
+            <a href="{{route('rep.create')}}"><span class="fa fa-sticky-note"></span>Reports</a>
           </li>
           <li>
             <a href="#"><span class="fa fa-users"></span>Patients</a>
@@ -62,17 +61,23 @@
                     <h6 style="padding-right:10px;">{{Auth::user()->name}}</h6>
                     <p style="margin-bottom: 0px;">{{Auth::user()->usertype}}</p>
                 </li>
-                <li class="nav-item dropdown">
-                    <img src="{{asset('profile_pic/default_user.png')}}" id="dropdown1" data-bs-toggle="dropdown"  height="36px">
-                    <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                <li class="nav-item">
+                  <img src="{{asset('profile_pic/default_user.png')}}" height="36px">
+                </li>
+      
+                   <li class="nav-item dropdown">
+                    <a  class="dropdown-toggle nav-link" id="dropdown1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre data-bs-toggle="dropdown"  height="36px">
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width: 15px;"aria-labelledby="dropdown1">
                       <form method="POST" action="{{route('logout')}}">
                         @csrf
-                         <li ><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                         <a href="{{ route('logout') }}" onclick="event.preventDefault();
                         this.closest('form').submit(); " role="button">
-                         <i class="fas fa-sign-out-alt"></i>
+                        
 
-                        {{ __('Log Out') }}
-                      </a></li>
+                        Logout
+                      </a>
 
                       </form>
                      
@@ -94,9 +99,6 @@
 @endsection
 
 @push('script')
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="{{ asset('js/sidebar.js') }}"></script>
 @endpush
-@section('footer')
 
-@stop
