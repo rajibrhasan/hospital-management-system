@@ -11,56 +11,14 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Hospital-Management-System
+This is a laravel project based on PHP. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![screencapture-127-0-0-1-8000-2021-12-25-17_05_09](https://user-images.githubusercontent.com/79998879/149207840-2051f332-505f-45ca-aa7b-a292678eb358.png)
+![screencapture-127-0-0-1-8000-adm-adduser-2021-12-25-17_15_50](https://user-images.githubusercontent.com/79998879/149207878-83225f74-02ab-4c51-9201-defc064a6557.png)
+![screencapture-127-0-0-1-8000-doc-2021-12-25-17_14_52](https://user-images.githubusercontent.com/79998879/149207914-e84f2c44-b546-4b3d-81a4-f44d9403834e.png)
+![screencapture-127-0-0-1-8000-doclist-2021-12-25-17_10_10](https://user-images.githubusercontent.com/79998879/149207936-bead29c4-d1d4-4a41-a179-5ec4b1677097.png)
+![screencapture-127-0-0-1-8000-doc-viewpatient-2021-12-25-17_13_43](https://user-images.githubusercontent.com/79998879/149207955-c3fe0ceb-1ef5-494d-90a7-d29b4e941867.png)
+![screencapture-127-0-0-1-8000-doc-viewpres-2021-12-25-17_14_00](https://user-images.githubusercontent.com/79998879/149207960-c1d3350d-7f60-4b2d-8cc8-7a97bafcb537.png)
+![screencapture-127-0-0-1-8000-guest-doclist-2021-12-25-17_07_46](https://user-images.githubusercontent.com/79998879/149207980-9771985c-1252-40ae-b118-5ecfc2250603.png)
+![screencapture-127-0-0-1-8000-rep-show-7-2021-12-25-17_11_35](https://user-images.githubusercontent.com/79998879/149208103-50aca98c-ffcd-46d9-b6a2-bafea24e973b.png)
